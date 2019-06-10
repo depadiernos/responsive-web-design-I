@@ -1,3 +1,189 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+@import "reset.css";
 
+body {
+  background: white;
+}
 
+.container {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+/* Nav */
+
+nav {
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 900px;
+  text-align: center;
+  background: white;
+  padding: 1rem 0;
+  margin: 0 auto;
+  justify-content: space-around;
+  box-shadow: 0 5px 5px grey;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  display: flex;
+  border: 1px solid white;
+}
+
+nav li a {
+  padding: 0.5rem 1.5rem;
+}
+
+nav li:hover {
+  border: 1px solid black;
+  box-sizing: border-box;
+  transition: 2s;
+}
+
+.active {
+  background: black;
+  color: white;
+}
+
+nav img {
+  padding: 0 0 0 4rem;
+}
+
+/* Home Header */
+
+header {
+  display: flex;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+header div {
+  padding: 2rem;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+header button {
+  border: 1px solid black;
+  background: none;
+  min-width: 40%;
+  margin: 0 30%;
+  padding: 0.5rem 1rem;
+}
+
+/* Home Content */
+
+.home section:first-child {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home section:first-child article {
+  max-width: 49%;
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+.home section:last-child {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home section:last-child article {
+  max-width: 30%;
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+
+/* Footer */
+
+footer {
+  margin: 2rem;
+}
+footer span {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+  nav {
+    width: 100%;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+  }
+  header img {
+    width: 100%;
+  }
+  .home section:first-child {
+    display: block;
+  }
+  .home section:first-child article {
+    max-width: 100%;
+  }
+  .home section:last-child {
+    display: block;
+  }
+  .home section:last-child article {
+    max-width: 100%;
+  }
+  .boxes section {
+    display: block;
+  }
+  .boxes section article {
+    width: 100%;
+  }
+  .facts {
+    flex-direction: column-reverse;
+  }
+  .facts div {
+    margin: 2rem;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about div {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+}
